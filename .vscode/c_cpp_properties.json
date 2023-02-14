@@ -1,0 +1,38 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceRoot}",
+                "${workspaceRoot}/include",
+                "${workspaceRoot}/include/generated",
+                "${workspaceRoot}/arch/x86/include",
+                "${workspaceRoot}/arch/x86/include/generated",
+                "${workspaceRoot}/include/uapi"
+            ],
+            "forcedInclude": [
+                "${workspaceRoot}/include/linux/compiler-version.h",
+                "${workspaceRoot}/include/linux/kconfig.h"
+            ],
+            "defines": [
+                "__KERNEL__"
+            ],
+            "browse": {
+                "path": [
+                    "${workspaceRoot}/include",
+                    "${workspaceRoot}/kernel",
+                    "${workspaceRoot}/mm",
+                    "${workspaceRoot}/fs",
+                    "${workspaceRoot}/arch/x86"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            },
+            "compilerPath": "/usr/bin/gcc",
+            "intelliSenseMode": "clang-x64",
+            "cStandard": "gnu99"
+        }
+    ],
+    "version": 4
+}
+
