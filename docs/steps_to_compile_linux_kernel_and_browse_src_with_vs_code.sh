@@ -57,7 +57,12 @@ cp -R /root/workspace/linuxkernelvscode/.vscode /root/workspace/linux
 
 # how to setup extraflags to keep .i files (files generated after processor).
 EXTRA_CFLAGS   += -DDEBUG -save-temps
-
+# in the kernel root Makefile add it to the KBUILD_CFLAGS as below
+KBUILD_CFLAGS   := -Wall -Wundef -Werror=strict-prototypes -Wno-trigraphs \
+                   -fno-strict-aliasing -fno-common -fshort-wchar -fno-PIE \
+                   -Werror=implicit-function-declaration -Werror=implicit-int \
+                   -Werror=return-type -Wno-format-security \
+                   -std=gnu11 -save-temps
 
 
 
