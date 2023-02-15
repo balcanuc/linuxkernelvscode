@@ -55,7 +55,8 @@ cd /root/workspace
 git clone https://github.com/balcanuc/linuxkernelvscode.git
 cp -R /root/workspace/linuxkernelvscode/.vscode /root/workspace/linux
 
-
+# how to setup extraflags to keep .i files (files generated after processor).
+EXTRA_CFLAGS   += -DDEBUG -save-temps
 
 
 
