@@ -108,7 +108,19 @@ KBUILD_CFLAGS   := -Wall -Wundef -Werror=strict-prototypes -Wno-trigraphs \
                    -Werror=return-type -Wno-format-security \
                    -std=gnu11 -save-temps
 ```
+### unminimize
+`man ls` returns following message
+```text
+This system has been minimized by removing packages and content that are
+not required on a system that users do not log into.
 
+To restore this content, including manpages, you can run the 'unminimize'
+command. You will still need to ensure the 'man-db' package is installed.
+```
+``` bash
+yes | unminimize
+```
+See https://hub.docker.com/r/verteen/ubuntu-unminimize/dockerfile for a docker fiel that is doing right that
 
 ## TODO
 Create a Docker file using commands above and the ones from 
