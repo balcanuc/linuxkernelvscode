@@ -59,10 +59,14 @@ lscpu # to know number of cpus
 time make -j6
 ```
 
-### install python
-```bash
+## install python
+```code bash
+# to avoid interactivity to when asked about region. Run 'dpkg-reconfigure tzdata' if you wish to change it.
+DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get -y install tzdata
 apt install python3.9 -y #  8 10 when asked about region
 ```
+
+
 To make python 3.9 as default python3 run command below. This was copied from  
 link: https://stackoverflow.com/questions/71034111/how-to-set-default-python3-to-python-3-9-instead-of-python-3-8-in-ubuntu-20-04-l
 ```bash
